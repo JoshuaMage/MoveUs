@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+	name: 'emerald';
+	default: true;
+	--color-primary: oklch(66% 0.179 58.318);
+	--color-secondary: oklch(43% 0 0);
+	 --color-base-content: oklch(12% 0.042 264.695);
+}
+
+body {
+	min-width: 500px;
+}
