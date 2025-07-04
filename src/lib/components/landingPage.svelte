@@ -352,7 +352,7 @@
 
 <div class=" flex justify-center overflow-hidden">
 	<div class="flex flex-col gap-20 p-10">
-		<div class="place-items-center">
+		<div class="place-items-center overflow-hidden">
 			<div class="flex w-full flex-col">
 				<div>
 					{#if bookNow[selectedIndex]}
@@ -367,7 +367,7 @@
 									class="flex w-full flex-col text-center xl:max-w-6xl xl:items-start xl:justify-end"
 								>
 									<h2
-										class="text-primary mb-2 font-[fantasy] text-2xl font-black tracking-wider sm:text-7xl"
+										class="text-primary mb-2 font-serif text-2xl font-black tracking-wider sm:text-7xl"
 									>
 										MoveUS Inc.
 									</h2>
@@ -376,11 +376,11 @@
 										<strong class="text-primary">${bookNow[selectedIndex].price}/DAY</strong>
 									</p>
 									<div class="flex justify-center gap-4">
-										<button class="btn btn-lg cursor-not-allowed"
+										<button class="btn sm:btn-lg cursor-not-allowed"
 											>{bookNow[selectedIndex].viewDetails}
 											<SvgArrow name="arrowTopRight" size={32} color="black" /></button
 										>
-										<button class="btn btn-lg btn-primary text-white"
+										<button class="btn sm:btn-lg btn-primary text-white"
 											>{bookNow[selectedIndex].book}<SvgArrow
 												name="arrowTopRight"
 												size={32}
@@ -393,7 +393,7 @@
 								<div class="flex justify-center gap-2 xl:flex-col xl:items-end xl:justify-end">
 									{#each bookNow as _, index}
 										<button
-											class="size-8 rounded-full border-2 transition-all duration-300 ease-in-out
+											class="size-4 sm:size-8 rounded-full border-2 transition-all duration-300 ease-in-out
 								{selectedIndex === index ? 'bg-primary  border-white' : 'border-secondary bg-secondary'}"
 											onclick={() => selectCar(index)}
 											aria-label="button"
@@ -413,7 +413,7 @@
 											/>
 											<div>
 												<h3 class="font-semibold text-white">Car Type</h3>
-												<label class="select">
+												<label class="select max-sm:select-sm">
 													<span class="label">Choose Cars</span>
 													<select class="w-full">
 														<option>Crimson</option>
@@ -433,7 +433,7 @@
 
 											<div>
 												<h3 class="font-semibold text-white">Pickup Location</h3>
-												<label class="select">
+												<label class="select max-sm:select-sm">
 													<span class="label">Location</span>
 													<select>
 														<option>Crimson</option>
@@ -452,7 +452,7 @@
 											/>
 											<div class="mr-4">
 												<h3 class="font-semibold text-white">Pickup Date</h3>
-												<input type="datetime-local" class="input w-40 rounded px-2 py-1 text-sm" />
+												<input type="datetime-local" class="input max-sm:input-sm w-40 rounded px-2 py-1 text-sm" />
 											</div>
 										</div>
 
@@ -464,7 +464,7 @@
 											/>
 											<div>
 												<h3 class="font-semibold text-white">Dropoff Location</h3>
-												<label class="select">
+												<label class="select max-sm:select-sm">
 													<span class="label">Location</span>
 													<select>
 														<option>Crimson</option>
@@ -483,7 +483,7 @@
 											/>
 											<div>
 												<h3 class="font-semibold text-white">Return Date</h3>
-												<input type="datetime-local" class="input w-40 rounded px-2 py-1 text-sm" />
+												<input type="datetime-local" class="input max-sm:input-sm w-40 rounded px-2 py-1 text-sm" />
 											</div>
 										</div>
 
@@ -523,12 +523,12 @@
 					</div>
 				</div>
 
-				<div class="mx-auto flex flex-col justify-center gap-6 max-2xl:items-center">
+				<div class="mx-auto flex flex-col justify-center gap-6 max-2xl:items-center ">
 					<h6 class="text-primary text-xl font-bold">* About us</h6>
-					<p class="text-secondary font-[fantasy] text-5xl font-bold tracking-wider">
+					<p class="text-secondary font-serif max-sm:text-2xl sm:text-5xl font-bold tracking-wider max-sm:text-center ">
 						Your Go-To for Trustworthy Car & Motor Rentals
 					</p>
-					<p class="text-secondary text-lg tracking-tight text-balance max-2xl:text-center">
+					<p class="text-secondary text-lg tracking-tight text-balance  max-2xl:text-center ">
 						Move Us Inc. is engaged in conducting, and carrying on the business of buying from
 						domestic and international manufacturers, wholesale and/or retailers, selling,
 						distributing, and marketing at wholesale/retail all kinds of goods, commodities, wares,
@@ -547,7 +547,7 @@
 							/>
 
 							<div>
-								<h6 class="text-secondary mb-2 font-[fantasy] text-2xl font-bold tracking-wide">
+								<h6 class="text-secondary mb-2 font-serif text-2xl font-bold tracking-wide">
 									Easy Booking Process
 								</h6>
 								<p class="text-secondary text-sm">
@@ -568,7 +568,7 @@
 							/>
 							<div class=" bg-primary absolute size-14 rounded-full opacity-20"></div>
 							<div>
-								<h6 class="text-secondary mb-2 font-[fantasy] text-2xl font-bold tracking-wide">
+								<h6 class="text-secondary mb-2 font-serif text-2xl font-bold tracking-wide">
 									Convenient Pick-up & Return Process
 								</h6>
 								<p class="text-secondary text-sm">
@@ -591,7 +591,7 @@
 			<div class="bg-primary/10 w-full max-w-[1800px] rounded-2xl p-10">
 				<div class="mb-10 text-center">
 					<h6 class="text-primary mb-6 text-2xl font-black">* Our Services</h6>
-					<p class="text-secondary font-[fantasy] text-4xl font-black tracking-widest">
+					<p class="text-secondary font-serif text-4xl font-black tracking-widest">
 						Explore our wide range of <br /> rental Service
 					</p>
 				</div>
@@ -612,7 +612,7 @@
 									class="relative z-10 mb-4 h-16 w-16 transition duration-300 group-hover:brightness-0 group-hover:invert"
 								/>
 								<h5
-									class="text-secondary relative z-10 mb-2 font-[fantasy] text-2xl font-bold tracking-wider transition-colors duration-300 group-hover:text-white"
+									class="text-secondary relative z-10 mb-2 font-serif text-2xl font-bold tracking-wider transition-colors duration-300 group-hover:text-white"
 								>
 									{title}
 								</h5>
@@ -645,7 +645,7 @@
 			<div>
 				<div class="mb-8 text-center">
 					<h6 class="text-primary mb-4 text-xl font-bold">* Our Fleets</h6>
-					<p class="text-secondary font-[fantasy] text-2xl font-bold">
+					<p class="text-secondary font-serif text-2xl font-bold">
 						Your Next Adventure Starts Here
 					</p>
 				</div>
@@ -668,7 +668,7 @@
 								>
 									{car.carType}
 								</p>
-								<h5 class="font-[fantasy] text-xl tracking-wider">{car.carName}</h5>
+								<h5 class="font-serif text-xl tracking-wider">{car.carName}</h5>
 								<div class="text-secondary grid grid-cols-2 gap-x-4 gap-y-2 text-sm mx-2">
 									<div class="flex flex-col items-start gap-y-2">
 										<div class="flex items-center gap-2">
@@ -741,8 +741,8 @@
 				<div class="grid gap-6 2xl:grid-cols-2">
 					<div class="flex flex-col gap-4">
 						<h6 class="text-primary text-xl font-bold">* How It Work</h6>
-						<p class="text-secondary font-[fantasy] text-6xl font-bold tracking-wider">
-							Quick and easy rentals <br />no hassle, just drive
+						<p class="text-secondary font-serif text-4xl sm:text-6xl font-bold tracking-wider">
+							Quick and easy rentals <br class="max-sm:hidden" />no hassle, just drive
 						</p>
 						<p class="text-xl font-semibold text-balance">
 							From easy online reservations to convenient pick-up and drop-off, our streamlined <br
@@ -770,7 +770,7 @@
 								<div>
 									{#if showGuidelines === index}
 										<p
-											class="text-secondary col-span-2 m-4 grid w-2xl font-semibold"
+											class="text-secondary col-span-2 m-4 grid sm:w-2xl font-semibold max-sm:overflow-hidden"
 											transition:slide
 										>
 											{description}
@@ -798,7 +798,7 @@
 				style="background-image: url('/clientImages/carForest.jpg');"
 			>
 				<div class="flex h-full flex-col flex-wrap justify-center gap-10">
-					<p class="font-[fantasy] text-5xl font-bold tracking-wider text-gray-200 xl:text-7xl">
+					<p class="font-serif text-3xl sm:text-5xl font-bold tracking-wider text-gray-200 xl:text-7xl">
 						Discover the ease and convenience <br /> of renting with Us
 					</p>
 				</div>
@@ -809,7 +809,7 @@
 			<div>
 				<div class="mb-10 text-center">
 					<h6 class="text-primary mb-6 text-2xl font-bold">* Why Choose Us</h6>
-					<p class="text-secondary font-[fantasy] text-5xl font-semibold tracking-wider">
+					<p class="text-secondary font-serif text-3xl sm:text-5xl font-semibold tracking-wider">
 						Delivering excellence, every step of the way
 					</p>
 				</div>
@@ -883,14 +883,14 @@
 
 					<div class="flex flex-col gap-4 px-10 max-xl:text-center">
 						<h6 class="text-primary text-xl font-bold">* Questions and Answers</h6>
-						<p class="text-secondary font-[fantasy] text-5xl font-bold tracking-wider">
+						<p class="text-secondary font-serif text-3xl sm:text-5xl font-bold tracking-wider">
 							Essential Information Regarding Our Services
 						</p>
 						<div class="grid w-full gap-4">
 							{#each feedback as { title, description }, index}
 								<div class="border-secondary my-4 grid w-full grid-cols-2 items-center">
 									<div class="flex items-start gap-4">
-										<p class="text-xl font-medium text-nowrap">{title}</p>
+										<p class="text-xl font-medium  sm:text-nowrap">{title}</p>
 									</div>
 
 									<div class="flex w-full justify-end">
@@ -923,12 +923,12 @@
 			class="place-items-center rounded-2xl py-10"
 			style="background-image: url(/clientImages/world.jpg);"
 		>
-			<h6 class="text-primary text-xl font-bold">* Testimonials</h6>
-			<p class="text-secondary text-5xl font-bold tracking-wider">
+			<h6 class="text-primary text-xl font-bold text-center">* Testimonials</h6>
+			<p class="text-secondary text-3xl text-center sm:text-5xl font-bold tracking-wider">
 				Feedback from Our Valued Customers
 			</p>
 
-			<div class="mt-20 grid gap-10 xl:grid-cols-3">
+			<div class="mt-20 grid gap-10 max-sm:items-center xl:grid-cols-3">
 				{#each getFeedbacks() as feedback}
 					<div class="card bg-base-100 w-96 gap-6 p-4 shadow-sm">
 						<div class="rating">
@@ -973,7 +973,7 @@
 				<div
 					class="flex flex-col justify-center gap-10 max-lg:mt-10 max-lg:items-center max-lg:text-center lg:ml-20"
 				>
-					<p class="text-4xl font-bold tracking-tighter 2xl:text-6xl">
+					<p class="text-3xl max-sm:text-center sm:text-4xl font-bold tracking-tighter 2xl:text-6xl">
 						Your next adventure starts here <br /> reserve your ride now!
 					</p>
 					<p class="text-lg font-semibold 2xl:text-2xl">

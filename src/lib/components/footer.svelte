@@ -5,7 +5,7 @@
 
 <div class="flex justify-center py-5">
 	<div
-		class="flex w-screen flex-col gap-6 rounded-2xl bg-cover bg-center max-lg:p-20 lg:px-40 lg:py-20"
+		class="flex w-screen flex-col gap-6 rounded-2xl bg-cover bg-center max-sm:p-10 sm:p-20 lg:px-40 lg:py-20"
 		style="background-image: url('/clientImages/footerbg.jpg')"
 	>
 		<div class="text-secondary grid items-start gap-10 lg:grid-cols-4 lg:place-items-center">
