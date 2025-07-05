@@ -168,28 +168,28 @@
 			alt: '',
 			title: 'Diverse Vehicle Selection',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas esse doloribus facere veniam'
+				'Choose from a wide range of well-maintained cars, SUVs, trucks, and more — perfect for any trip, style, or budget.'
 		},
 		{
 			icon: 'location',
 			alt: '',
 			title: 'Easily Accessible Locations',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas esse doloribus facere veniam'
+				'Pick up and drop off your rental at convenient locations near airports, city centers, and major transit hubs.'
 		},
 		{
 			icon: 'csr',
 			alt: '',
 			title: 'Dedicated Client Care',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas esse doloribus facere veniam'
+				'Our support team is here for you 24/7, ensuring a smooth and stress-free rental experience from start to finish'
 		},
 		{
 			icon: 'safety',
 			alt: '',
 			title: 'Secure, Reliable Transportation',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas esse doloribus facere veniam'
+				'Drive with confidence in well-maintained vehicles that prioritize your safety, comfort, and peace of mind.'
 		}
 	];
 
@@ -218,7 +218,7 @@
 			alt: 'customer',
 			rate: '',
 			feedback:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta repellat inventore delectus, recusandae ut sapiente, in ex alias odit',
+				'The booking process was super easy and fast. I found the exact car I needed within minutes, and the whole experience felt smooth from start to finish.',
 			name: 'Joshua White',
 			postion: 'Customer'
 		},
@@ -228,7 +228,7 @@
 			alt: 'customer',
 			rate: '',
 			feedback:
-				'Mollitia dicta repellat inventore delectus, recusandae ut sapiente, in ex alias odit Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+				'I really appreciated how clear the pricing was—no hidden fees or surprises. The website made it easy to compare options and choose what fit my budget',
 			name: 'Ann Miles',
 			postion: 'Customer'
 		},
@@ -238,7 +238,7 @@
 			alt: 'customer',
 			rate: '',
 			feedback:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta repellat inventore delectus, recusandae ut sapiente, in ex alias odit',
+				'This was my first time renting a car online, and the site made it very straightforward. Everything was well-organized and easy to understand, even for a first-timer like me.',
 			name: 'Jade curso',
 			postion: 'Customer'
 		},
@@ -248,7 +248,7 @@
 			alt: 'customer',
 			rate: '',
 			feedback:
-				'inventore delectus, recusandae ut sapiente, in ex alias odit Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta repellat ',
+				'I booked my car on my phone while traveling, and the mobile site worked flawlessly. It was quick, responsive, and I got my confirmation instantly.',
 			name: 'Poole Jordan',
 			postion: 'Customer'
 		},
@@ -258,7 +258,7 @@
 			alt: 'customer',
 			rate: '',
 			feedback:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta repellat inventore delectus, recusandae ut sapiente, in ex alias odit',
+				'There was a great variety of cars to choose from, and I loved being able to filter by type and price. It saved me a lot of time.',
 			name: 'Drake Green',
 			postion: 'Customer'
 		}
@@ -367,11 +367,11 @@
 									class="flex w-full flex-col text-center xl:max-w-6xl xl:items-start xl:justify-end"
 								>
 									<h2
-										class="text-primary mb-2 font-serif text-2xl font-black tracking-wider sm:text-7xl"
+										class="text-primary mb-2 font-serif text-4xl font-black  sm:text-6xl"
 									>
 										MoveUS Inc.
 									</h2>
-									<p class="mb-8 text-2xl font-bold">
+									<p class="mb-8 text-xl sm:text-2xl font-bold max-sm:text-white">
 										{bookNow[selectedIndex].carType}
 										<strong class="text-primary">${bookNow[selectedIndex].price}/DAY</strong>
 									</p>
@@ -393,7 +393,7 @@
 								<div class="flex justify-center gap-2 xl:flex-col xl:items-end xl:justify-end">
 									{#each bookNow as _, index}
 										<button
-											class="size-4 sm:size-8 rounded-full border-2 transition-all duration-300 ease-in-out
+											class="size-4 rounded-full border-2 transition-all duration-300 ease-in-out sm:size-8
 								{selectedIndex === index ? 'bg-primary  border-white' : 'border-secondary bg-secondary'}"
 											onclick={() => selectCar(index)}
 											aria-label="button"
@@ -403,17 +403,13 @@
 
 								<div class="col-span-2 mb-4 grid items-end justify-center">
 									<div
-										class="bg-primary grid grid-cols-2 items-end justify-center gap-4 rounded-4xl p-4 max-sm:flex max-sm:flex-wrap sm:p-6 md:grid-cols-3 xl:flex"
+										class="bg-primary max-sm: grid grid-cols-2 gap-4 rounded-4xl max-sm:flex max-sm:flex-wrap sm:items-end justify-center p-4 sm:p-6 lg:grid-cols-3  2xl:flex max-sm:w-70"
 									>
 										<div class="flex items-center gap-2">
-											<img
-												src="https://html.awaikenthemes.com/novaride/light/images/icon-rent-details-1.svg"
-												alt=""
-												class="size-8 invert filter"
-											/>
+											<SvgArrow name="carType" size={32} color="black" />
 											<div>
 												<h3 class="font-semibold text-white">Car Type</h3>
-												<label class="select max-sm:select-sm">
+												<label class="select max-sm:select-sm w-40">
 													<span class="label">Choose Cars</span>
 													<select class="w-full">
 														<option>Crimson</option>
@@ -425,15 +421,11 @@
 										</div>
 
 										<div class="flex items-center gap-2">
-											<img
-												src="https://html.awaikenthemes.com/novaride/light/images/icon-rent-details-2.svg"
-												alt="pickupLocation"
-												class="size-8 invert filter"
-											/>
+											<SvgArrow name="pickupLocation" size={32} color="black" />
 
 											<div>
 												<h3 class="font-semibold text-white">Pickup Location</h3>
-												<label class="select max-sm:select-sm">
+												<label class="select max-sm:select-sm w-40">
 													<span class="label">Location</span>
 													<select>
 														<option>Crimson</option>
@@ -445,26 +437,21 @@
 										</div>
 
 										<div class="flex items-center gap-2">
-											<img
-												src="https://html.awaikenthemes.com/novaride/light/images/icon-rent-details-3.svg"
-												alt="pickupDate"
-												class="size-8 invert filter"
-											/>
-											<div class="mr-4">
+											<SvgArrow name="date" size={26} color="black" />
+											<div >
 												<h3 class="font-semibold text-white">Pickup Date</h3>
-												<input type="datetime-local" class="input max-sm:input-sm w-40 rounded px-2 py-1 text-sm" />
+												<input
+													type="datetime-local"
+													class="input max-sm:input-sm w-40 rounded px-2 py-1 text-sm"
+												/>
 											</div>
 										</div>
 
 										<div class="flex items-center gap-2">
-											<img
-												src="https://html.awaikenthemes.com/novaride/light/images/icon-rent-details-4.svg"
-												alt="dropoff"
-												class="size- invert filter"
-											/>
+											<SvgArrow name="dropOff" size={32} color="black" />
 											<div>
 												<h3 class="font-semibold text-white">Dropoff Location</h3>
-												<label class="select max-sm:select-sm">
+												<label class="select max-sm:select-sm w-40">
 													<span class="label">Location</span>
 													<select>
 														<option>Crimson</option>
@@ -476,19 +463,18 @@
 										</div>
 
 										<div class="flex items-center gap-2">
-											<img
-												src="https://html.awaikenthemes.com/novaride/light/images/icon-rent-details-2.svg"
-												alt="return date"
-												class="size-8 invert filter"
-											/>
+											<SvgArrow name="returnDate" size={26} color="black" />
 											<div>
 												<h3 class="font-semibold text-white">Return Date</h3>
-												<input type="datetime-local" class="input max-sm:input-sm w-40 rounded px-2 py-1 text-sm" />
+												<input
+													type="datetime-local"
+													class="input max-sm:input-sm w-40 rounded px-2 py-1 text-sm"
+												/>
 											</div>
 										</div>
 
-										<div class="ml-4 flex justify-center">
-											<button class="btn btn-white text-primary w-30 font-black">Book</button>
+										<div class="flexf ml-4 justify-center">
+											<button class="btn max-sm:btn-sm bg-white text-primary w-40 font-black max-sm:ml-5">Book</button>
 										</div>
 									</div>
 								</div>
@@ -500,7 +486,7 @@
 		</div>
 
 		<div class=" place-items-center py-20">
-			<div class="grid h-full w-full gap-10 xl:max-w-[1536px] 2xl:grid-cols-2">
+			<div class="grid h-full w-full gap-10 xl:max-w-[1800px] 2xl:grid-cols-2">
 				<div class="relative mx-auto w-full max-w-3xl">
 					<img
 						src="https://maseholdings.com/wp-content/uploads/2023/01/Move-Us-Thumbnail.webp"
@@ -510,7 +496,7 @@
 					/>
 
 					<div
-						class="absolute top-[-2%] left-[55%] aspect-video w-[45%] max-w-[400px] overflow-hidden rounded-xl"
+						class="absolute top-[-2%] left-[55%] aspect-video w-[45%] overflow-hidden rounded-xl"
 					>
 						<iframe
 							src="https://www.youtube.com/embed/cCk4lxIP80U"
@@ -523,12 +509,14 @@
 					</div>
 				</div>
 
-				<div class="mx-auto flex flex-col justify-center gap-6 max-2xl:items-center ">
+				<div class=" flex flex-col justify-center gap-6 max-2xl:items-center">
 					<h6 class="text-primary text-xl font-bold">* About us</h6>
-					<p class="text-secondary font-serif max-sm:text-2xl sm:text-5xl font-bold tracking-wider max-sm:text-center ">
+					<p
+						class="text-secondary font-serif font-bold  max-sm:text-center max-sm:text-xl sm:text-4xl"
+					>
 						Your Go-To for Trustworthy Car & Motor Rentals
 					</p>
-					<p class="text-secondary text-lg tracking-tight text-balance  max-2xl:text-center ">
+					<p class="text-secondary sm:text-lg tracking-tight text-balance max-2xl:text-center">
 						Move Us Inc. is engaged in conducting, and carrying on the business of buying from
 						domestic and international manufacturers, wholesale and/or retailers, selling,
 						distributing, and marketing at wholesale/retail all kinds of goods, commodities, wares,
@@ -543,11 +531,11 @@
 							<img
 								src="https://html.awaikenthemes.com/novaride/light/images/icon-about-trusted-1.svg"
 								alt="phone"
-								class="relative z-10 size-20"
+								class="relative z-10 sm:size-20"
 							/>
 
 							<div>
-								<h6 class="text-secondary mb-2 font-serif text-2xl font-bold tracking-wide">
+								<h6 class="text-secondary mb-2 font-serif text-xl sm:text-2xl font-bold tracking-wide">
 									Easy Booking Process
 								</h6>
 								<p class="text-secondary text-sm">
@@ -564,11 +552,11 @@
 							<img
 								src="https://html.awaikenthemes.com/novaride/light/images/icon-about-trusted-2.svg"
 								alt="car"
-								class="relative z-10 size-20"
+								class="relative z-10 sm:size-20"
 							/>
 							<div class=" bg-primary absolute size-14 rounded-full opacity-20"></div>
 							<div>
-								<h6 class="text-secondary mb-2 font-serif text-2xl font-bold tracking-wide">
+								<h6 class="text-secondary mb-2 font-serif text-xl sm:text-2xl font-bold tracking-wide">
 									Convenient Pick-up & Return Process
 								</h6>
 								<p class="text-secondary text-sm">
@@ -588,16 +576,16 @@
 		</div>
 
 		<div class="place-items-center">
-			<div class="bg-primary/10 w-full max-w-[1800px] rounded-2xl p-10">
+			<div class="bg-primary/10 w-full  rounded-2xl p-10">
 				<div class="mb-10 text-center">
-					<h6 class="text-primary mb-6 text-2xl font-black">* Our Services</h6>
-					<p class="text-secondary font-serif text-4xl font-black tracking-widest">
-						Explore our wide range of <br /> rental Service
+					<h6 class="text-primary mb-6 text-lg sm:text-2xl font-black">* Our Services</h6>
+					<p class="text-secondary font-serif text-2xl sm:text-4xl font-bold ">
+						Explore our wide range of rental Service
 					</p>
 				</div>
 
 				<div class="flex justify-center">
-					<div class="grid max-w-[80%] grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-4">
+					<div class="grid  grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-4">
 						{#each service as { image, alt, title, description }}
 							<div
 								class="group relative flex flex-col place-items-center overflow-hidden rounded-xl bg-white p-6 text-center transition-colors duration-1000 hover:text-white md:items-start"
@@ -612,7 +600,7 @@
 									class="relative z-10 mb-4 h-16 w-16 transition duration-300 group-hover:brightness-0 group-hover:invert"
 								/>
 								<h5
-									class="text-secondary relative z-10 mb-2 font-serif text-2xl font-bold tracking-wider transition-colors duration-300 group-hover:text-white"
+									class="text-secondary relative z-10 mb-2 font-serif text-xl sm:text-2xl font-bold sm:tracking-wider transition-colors duration-300 group-hover:text-white"
 								>
 									{title}
 								</h5>
@@ -632,11 +620,11 @@
 				</div>
 
 				<div class="my-20 flex flex-col place-items-center gap-6">
-					<p class="text-lg font-semibold">
+					<p class="sm:text-lg font-semibold text-center">
 						Discover our range of car rental services designed to meet all your travel needs. From a
 						diverse fleet of vehicles to flexible rental plans.
 					</p>
-					<button class="btn btn-lg btn-primary text-white">View All service</button>
+					<button class="btn sm:btn-lg btn-primary text-white">View All service</button>
 				</div>
 			</div>
 		</div>
@@ -645,7 +633,7 @@
 			<div>
 				<div class="mb-8 text-center">
 					<h6 class="text-primary mb-4 text-xl font-bold">* Our Fleets</h6>
-					<p class="text-secondary font-serif text-2xl font-bold">
+					<p class="text-secondary font-serif text-2xl sm:text-4xl font-bold">
 						Your Next Adventure Starts Here
 					</p>
 				</div>
@@ -669,7 +657,7 @@
 									{car.carType}
 								</p>
 								<h5 class="font-serif text-xl tracking-wider">{car.carName}</h5>
-								<div class="text-secondary grid grid-cols-2 gap-x-4 gap-y-2 text-sm mx-2">
+								<div class="text-secondary mx-2 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
 									<div class="flex flex-col items-start gap-y-2">
 										<div class="flex items-center gap-2">
 											<img
@@ -741,10 +729,10 @@
 				<div class="grid gap-6 2xl:grid-cols-2">
 					<div class="flex flex-col gap-4">
 						<h6 class="text-primary text-xl font-bold">* How It Work</h6>
-						<p class="text-secondary font-serif text-4xl sm:text-6xl font-bold tracking-wider">
-							Quick and easy rentals <br class="max-sm:hidden" />no hassle, just drive
+						<p class="text-secondary font-serif text-2xl font-bold sm:text-5xl">
+							Quick and easy rentals no hassle, just drive
 						</p>
-						<p class="text-xl font-semibold text-balance">
+						<p class="sm:text-xl font-semibold text-balance">
 							From easy online reservations to convenient pick-up and drop-off, our streamlined <br
 							/>
 							process is designed to deliver a smooth, efficient rental experience every time.
@@ -754,7 +742,7 @@
 								<div class="border-secondary my-4 grid w-full grid-cols-2 items-center">
 									<div class="flex items-start gap-4">
 										<img src={image} {alt} />
-										<p class="text-2xl font-medium text-nowrap">{title}</p>
+										<p class="text-xl sm:text-2xl font-medium text-nowrap">{title}</p>
 									</div>
 
 									<div class="flex w-full justify-end">
@@ -770,7 +758,7 @@
 								<div>
 									{#if showGuidelines === index}
 										<p
-											class="text-secondary col-span-2 m-4 grid sm:w-2xl font-semibold max-sm:overflow-hidden"
+											class="text-secondary col-span-2 m-4 grid font-semibold max-sm:overflow-hidden sm:w-2xl"
 											transition:slide
 										>
 											{description}
@@ -781,11 +769,11 @@
 							{/each}
 						</div>
 					</div>
-					<div class="flex h-[600px] items-center justify-center">
+					<div class="flex h-[600px] items-center justify-center max-sm:my-10">
 						<img
 							src="https://maseholdings.com/wp-content/uploads/2023/01/Move-Us-Thumbnail.webp"
 							alt="warehouse"
-							class="h-full rounded-2xl object-contain"
+							class="h-full rounded-2xl object-cover sm:object-contain "
 						/>
 					</div>
 				</div>
@@ -798,7 +786,9 @@
 				style="background-image: url('/clientImages/carForest.jpg');"
 			>
 				<div class="flex h-full flex-col flex-wrap justify-center gap-10">
-					<p class="font-serif text-3xl sm:text-5xl font-bold tracking-wider text-gray-200 xl:text-7xl">
+					<p
+						class="font-serif text-3xl font-bold tracking-wider text-gray-200 sm:text-5xl xl:text-7xl"
+					>
 						Discover the ease and convenience <br /> of renting with Us
 					</p>
 				</div>
@@ -809,7 +799,7 @@
 			<div>
 				<div class="mb-10 text-center">
 					<h6 class="text-primary mb-6 text-2xl font-bold">* Why Choose Us</h6>
-					<p class="text-secondary font-serif text-3xl sm:text-5xl font-semibold tracking-wider">
+					<p class="text-secondary font-serif text-2xl font-bold  sm:text-4xl">
 						Delivering excellence, every step of the way
 					</p>
 				</div>
@@ -822,8 +812,8 @@
 									<SvgArrow name={icon} size={40} color="black" />
 								</div>
 								<div>
-									<p class="mb-2 text-2xl font-bold tracking-tight">{title}</p>
-									<p class="text-secondary text-lg font-semibold text-balance">{description}</p>
+									<p class="mb-2 text-xl sm:text-2xl font-bold tracking-tight">{title}</p>
+									<p class="text-secondary sm:text-lg font-semibold text-balance sm:w-[500px] ">{description}</p>
 								</div>
 							</div>
 							<div class="flex w-full justify-start">
@@ -842,13 +832,13 @@
 
 					<div class="flex flex-col space-y-10">
 						{#each chooseUs.slice(2, 4) as { icon, title, description }}
-							<div class="flex gap-4">
+							<div class="flex justify-center gap-4">
 								<div>
 									<SvgArrow name={icon} size={40} color="black" />
 								</div>
 								<div>
-									<p class="mb-2 text-2xl font-bold tracking-tight">{title}</p>
-									<p class="text-secondary text-lg font-semibold text-balance">{description}</p>
+									<p class="mb-2 text-xl sm:text-2xl font-bold tracking-tight">{title}</p>
+									<p class="text-secondary sm:text-lg font-semibold text-balance sm:w-[500px]">{description}</p>
 								</div>
 							</div>
 							<div class="flex w-full justify-start">
@@ -863,11 +853,12 @@
 		<div class="bg-primary/15 place-items-center rounded-2xl">
 			<div>
 				<div class="grid gap-20 py-10 xl:grid-cols-2">
-					<div class="relative mx-auto flex h-[500px] max-h-[500px] overflow-hidden">
+					<div class="relative sm:mx-auto flex sm:h-[500px] sm:max-h-[500px] overflow-hidden">
 						<img
 							src="https://demo.awaikenthemes.com/novaride/wp-content/uploads/2024/08/our-faqs-img-1.jpg"
 							alt=""
 							style="clip-path: polygon(0 0, 42% 0, 100% 100%, 53% 100%);"
+
 						/>
 						<img
 							src="https://demo.awaikenthemes.com/novaride/wp-content/uploads/2024/08/our-faqs-img-2.jpg"
@@ -878,19 +869,20 @@
 							src="https://demo.awaikenthemes.com/novaride/wp-content/uploads/2024/08/our-faqs-car-img.png"
 							alt="warehouse"
 							class="absolute top-40"
+							
 						/>
 					</div>
 
 					<div class="flex flex-col gap-4 px-10 max-xl:text-center">
 						<h6 class="text-primary text-xl font-bold">* Questions and Answers</h6>
-						<p class="text-secondary font-serif text-3xl sm:text-5xl font-bold tracking-wider">
+						<p class="text-secondary font-serif text-2xl font-bold sm:tracking-wider sm:text-5xl">
 							Essential Information Regarding Our Services
 						</p>
 						<div class="grid w-full gap-4">
 							{#each feedback as { title, description }, index}
 								<div class="border-secondary my-4 grid w-full grid-cols-2 items-center">
 									<div class="flex items-start gap-4">
-										<p class="text-xl font-medium  sm:text-nowrap">{title}</p>
+										<p class="text-xl font-medium sm:text-nowrap">{title}</p>
 									</div>
 
 									<div class="flex w-full justify-end">
@@ -903,11 +895,8 @@
 										</button>
 									</div>
 									{#if showGuidelines === index}
-										<p class="text-secondary col-span-2 m-4 grid font-semibold" transition:slide>
-											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quam, atque
-											laborum ex laboriosam omnis libero modi numquam reprehenderit rem eveniet
-											animi molestias suscipit, quia quisquam quibusdam obcaecati aspernatur
-											facilis.
+										<p class="text-secondary col-span-2 m-4 grid font-semibold text-start" transition:slide>
+										{description}
 										</p>
 									{/if}
 								</div>
@@ -923,8 +912,8 @@
 			class="place-items-center rounded-2xl py-10"
 			style="background-image: url(/clientImages/world.jpg);"
 		>
-			<h6 class="text-primary text-xl font-bold text-center">* Testimonials</h6>
-			<p class="text-secondary text-3xl text-center sm:text-5xl font-bold tracking-wider">
+			<h6 class="text-primary text-center text-xl font-bold">* Testimonials</h6>
+			<p class="text-secondary text-center text-2xl font-bold sm:text-5xl">
 				Feedback from Our Valued Customers
 			</p>
 
@@ -973,18 +962,20 @@
 				<div
 					class="flex flex-col justify-center gap-10 max-lg:mt-10 max-lg:items-center max-lg:text-center lg:ml-20"
 				>
-					<p class="text-3xl max-sm:text-center sm:text-4xl font-bold tracking-tighter 2xl:text-6xl">
+					<p
+						class="text-3xl font-bold  max-sm:text-center sm:text-4xl 2xl:text-5xl"
+					>
 						Your next adventure starts here <br /> reserve your ride now!
 					</p>
 					<p class="text-lg font-semibold 2xl:text-2xl">
 						Need help? Our friendly customer service team is <br /> just a message away.
 					</p>
 					<div>
-						<button class="btn btn-primary btn-xl text-white">Contact us</button>
+						<button class="btn btn-primary sm:btn-xl text-white">Contact us</button>
 					</div>
 				</div>
-				<div>
-					<img src="/clientImages/redcar.webp" alt="redcar" class="h-auto" />
+				<div class="flex items-center justify-center">
+					<img src="/clientImages/redcar.webp" alt="redcar" class="md:h-auto h-80" />
 				</div>
 			</div>
 		</div>
